@@ -22,7 +22,7 @@ L.TileLayer.Canvas = L.TileLayer.extend({
     };
     const tileZoom = this._getZoomForUrl();
     img.src = isNaN(tileZoom) ? '' : this.getTileUrl(coords);
-    img.crossOrigin = "anonymous";
+    img.crossOrigin = "use-credentials";
   },
   createTile: function (coords, done) {
     const { timeout } = this.options;
